@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário do amor</title>
+    <style>
+        body {
+            background-image: url('FOTO.webp'); /* Substitua pelo caminho da sua imagem */
+            background-size: cover; /* Faz com que a imagem cubra toda a tela */
+            display: flex;
+            flex-direction: column; /* Alinha em coluna */
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            height: 100vh; /* Faz o body ocupar a altura total da tela */
+            margin: 0;
+            text-align: center; /* Centraliza o texto */
+            position: relative; /* Permite posicionar o botão "NÃO" em relação a este container */
+        }
+
+        h1 {
+            color: white; /* Cor do texto da pergunta */
+            font-size: 3em; /* Ajusta o tamanho da fonte aqui */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra no texto para melhor legibilidade */
+        }
+        
+
+        /* Estilo para o botão SIM */
+        #sim {
+            padding: 10px 10px; /* Tamanho do botão */
+            font-size: 1.2em; /* Tamanho da fonte */
+            color: white; /* Cor do texto */
+            background-color: green; /* Cor de fundo do botão */
+            border: none; /* Remove bordas */
+            border-radius: 5px; /* Cantos arredondados */
+            cursor: pointer; /* Muda o cursor ao passar por cima */
+            transition: background-color 0.3s; /* Animação de mudança de cor */
+        }
+        
+        #sim:hover {
+            background-color: darkgreen; /* Cor de fundo ao passar o mouse */
+        }
+
+        /* Estilo para o botão NÃO */
+        #nao {
+            position: absolute; /* Permite mover o botão livremente */
+            top: 300px; /* Posição inicial do botão "NÃO" */
+            left: 150px; /* Posição inicial do botão "NÃO" */
+            padding: 10px 10px; /* Tamanho do botão */
+            font-size: 1.2em; /* Tamanho da fonte */
+            color: white; /* Cor do texto */
+            background-color: red; /* Cor de fundo do botão */
+            border: none; /* Remove bordas */
+            border-radius: 5px; /* Cantos arredondados */
+            cursor: pointer; /* Muda o cursor ao passar por cima */
+            transition: background-color 0.3s; /* Animação de mudança de cor */
+        }
+
+        #nao:hover {
+            background-color: darkred; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Você é meu amorzinho?</h1>
+    <button id="sim">SIM</button>
+    <button id="nao" onmouseover="moveNao()">NÃO</button>
+    
+    <script>
+        function moveNao() {
+            const naoButton = document.getElementById('nao');
+            const x = Math.random() * (window.innerWidth - 100); // 100 é a largura do botão
+            const y = Math.random() * (window.innerHeight - 50); // 50 é a altura do botão
+            naoButton.style.left = x + 'px';
+            naoButton.style.top = y + 'px';
+        }
+    
+        document.getElementById('sim').addEventListener('click', () => {
+            alert('Que amor! ❤️❤️');
+            window.open('https://www.youtube.com/watch?v=JqIHlDVqUTw', '_blank');
+        });
+    </script>
+    
+    </body>
+
+</html>
