@@ -62,26 +62,27 @@
     </style>
 </head>
 <body>
-
     <h1>Você é meu amorzinho?</h1>
     <button id="sim">SIM</button>
-    <button id="nao" onmouseover="moveNao()">NÃO</button>
+    <button id="nao" onclick="moveNao()">NÃO</button>
     
     <script>
         function moveNao() {
             const naoButton = document.getElementById('nao');
-            const x = Math.random() * (window.innerWidth - 100); // 100 é a largura do botão
-            const y = Math.random() * (window.innerHeight - 50); // 50 é a altura do botão
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
             naoButton.style.left = x + 'px';
             naoButton.style.top = y + 'px';
+            naoButton.style.transform = 'scale(1.1)'; 
+            setTimeout(() => naoButton.style.transform = 'scale(1)', 300); 
         }
-    
+
         document.getElementById('sim').addEventListener('click', () => {
             alert('Que amor! ❤️❤️');
             window.open('https://www.youtube.com/watch?v=JqIHlDVqUTw', '_blank');
         });
     </script>
-    
-    </body>
+</body>
+
 
 </html>
