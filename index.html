@@ -6,17 +6,20 @@
     <title>Questionário do amor</title>
     <style>
         body {
-            background-image: url('FOTO.webp'); /* Substitua pelo caminho da sua imagem */
-            background-size: cover; /* Faz com que a imagem cubra toda a tela */
+            background-image: url('FOTO.webp'); 
+            background-size: contain; /* Altera de cover para contain */
+            background-repeat: no-repeat; /* Evita que a imagem repita */
+            background-position: center; /* Centraliza a imagem */
             display: flex;
-            flex-direction: column; /* Alinha em coluna */
-            justify-content: center; /* Centraliza verticalmente */
-            align-items: center; /* Centraliza horizontalmente */
-            height: 100vh; /* Faz o body ocupar a altura total da tela */
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
             margin: 0;
-            text-align: center; /* Centraliza o texto */
-            position: relative; /* Permite posicionar o botão "NÃO" em relação a este container */
+            text-align: center; 
+            position: relative; 
         }
+        
 
         h1 {
             color: white; /* Cor do texto da pergunta */
